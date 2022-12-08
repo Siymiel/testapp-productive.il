@@ -1,24 +1,30 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { CiUser } from 'react-icons/ci'
 
 const Login = () => {
 
   const style = {
     height: "100vh",
-    backgroundImage: "url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80)"
   };
 
+  const style1 = {
+    backgroundImage: "url('https://images.unsplash.com/file-1636585210491-f28ca34ea8ecimage?dpr=2&auto=format&fit=crop&w=416&q=60')"
+  }
+
   return (
-    <div className='max-w-full mx-auto grid items-center bg-cover bg-center relative' style={style}>
-      <div className='absolute inset-0 bg-black bg-opacity-25'></div>
-      <section className='z-10'>
-        <div className='max-w-md mx-auto'>
-           <h3 className='text-3xl font-light pb-5 uppercase text-white text-center tracking-wide'>Login</h3>
+    <div className='max-w-full mx-auto grid grid-cols-2 items-center bg-cover bg-center' style={style}>
+      <section>
+        <div className='max-w-md mx-auto flex items-center space-x-3'>
+            <div className='w-12 h-12 p-2 rounded-full border border-gray-900 grid items-center justify-center'>
+              <CiUser className='w-8 h-8'/>
+            </div>
+           <h3 className='text-3xl font-light uppercase text-center tracking-wide'>Login</h3>
         </div>
           
-        <form className='max-w-lg mx-auto shadow-xl px-10 py-10 rounded bg-white'>
-          <p className='text-xl font-light pb-5 tracking-wide'>Sign in to your account</p>
+        <form className='max-w-lg mx-auto  px-10 py-10 rounded bg-white'>
+          {/* <p className='text-xl font-light pb-5 tracking-wide'>Sign in to your account</p> */}
           <div className='grid'>
             <label htmlFor='email' className='mb-1 text-xl font-light'>Email</label>
             <input type="email" className='text-base font-light px-4 py-2 rounded border border-[#1fb6ff] focus:border-red-400' placeholder="Email Address"/>
@@ -41,6 +47,7 @@ const Login = () => {
           </div>
         </form>
       </section>
+      <section className='h-full bg-cover bg-center' style={style1}></section>
     </div>
   );
 }
