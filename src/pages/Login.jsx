@@ -24,7 +24,6 @@ const Login = () => {
         </div>
           
         <form className='max-w-lg mx-auto  px-10 py-10 rounded bg-white'>
-          {/* <p className='text-xl font-light pb-5 tracking-wide'>Sign in to your account</p> */}
           <div className='grid'>
             <label htmlFor='email' className='mb-1 text-xl font-light'>Email</label>
             <input type="email" className='text-base font-light px-4 py-2 rounded border border-[#1fb6ff] focus:border-red-400' placeholder="Email Address"/>
@@ -41,6 +40,9 @@ const Login = () => {
             </div>
             <Link to="/" className="text-base font-light text-[#1fb6ff]">Forgot password?</Link>
         </div>
+          </div>
+          <div className='pt-4'>
+           <Link to="/register" className='text-base font-light tracking- hover:text-[#1fb6ff] transition-all'>Dont have an account?</Link>
           </div>
           <div className='pt-9'>
             <button className='px-6 py-2 w-full bg-[#1fb6ff] font-light tracking-wide text-white text-md rounded uppercase'>Submit</button>
