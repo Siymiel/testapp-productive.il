@@ -3,31 +3,23 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { CiUser } from 'react-icons/ci';
-// import { users } from '../users';
 import { attemptLogin } from '../redux/apiCalls';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
+  const authUser = useSelector(state => state.user.currentUser)
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if(!email) toast.error('Please enter Email');
-  //   if(!password) toast.error('Password is required!');
-
-  //   users.map(user => {
-  //     if(user.email === email && user.password === password) {
-  //       return toast.success('You are Authenticated')
-  //     }else {
-  //       return toast.error('You are not authenticated')
-  //     }
-  //   })
-  // }
   const handleSubmit = (e) => {
     e.preventDefault()
     attemptLogin(dispatch, { email, password })
+    if(authUser !== null) {
+      navigate('/')
+    }
   }
 
   return (

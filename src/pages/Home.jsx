@@ -6,6 +6,7 @@ import HeroCarousel from '../components/carousels/HeroCarousel';
 import UserSection from '../components/sections/UserSection';
 import CtaSection from '../components/sections/CtaSection';
 import Modal from '../components/Modal';
+import RatingSection from '../components/sections/RatingSection';
 
 const Home = () => {
   const [modalOpen, setModalOpen] = useState(false)
@@ -23,6 +24,7 @@ const Home = () => {
     <Modal modalOpen={modalOpen} handleCloseClick={handleCloseClick}/>
     <UserSection />
     <CtaSection />
+    <RatingSection />
     <Footer />
   </>
   );

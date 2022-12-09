@@ -6,9 +6,10 @@ import Logo from './Logo'
 import { Link } from 'react-router-dom'
 import { BiBell } from 'react-icons/bi';
 import { RxCross2, RxHamburgerMenu } from 'react-icons/rx';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { attemptLogout } from '../redux/apiCalls'
 // import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useNavigate } from 'react-router-dom';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -16,10 +17,13 @@ function classNames(...classes) {
 
 const Navbar = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const authUser = useSelector(state => state.user.currentUser)
 
   const handleLogout = (e) => {
     e.preventDefault()
     attemptLogout(dispatch)
+    if(authUser === null) navigate('/login')
   }
 
   return (

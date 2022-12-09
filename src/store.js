@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import userReducer from './redux/userSlice';
+import usersReducer from './redux/usersSlice';
 
 export const saveState = (state) => {
   try {
@@ -23,7 +24,8 @@ const persistedState = loadState();
 
 //These are the reducers which do not change
 const staticReducers = {
-  user: userReducer
+  user: userReducer,
+  users: usersReducer
 };
 
 const initialStore = {

@@ -1,9 +1,12 @@
 /* eslint-disable prettier/prettier */
 import { axiosInstance } from '../axiosInstances';
 import { loginStart, loginSuccess, loginFailure, logoutStart, logoutSuccess, logoutFailure } from './userSlice';
+import { getAllUsersStart, getAllUsersSuccess, getAllUsersFail } from './usersSlice';
 import { toast } from 'react-hot-toast';
 
+// MOCK LOGIN
 export const attemptLogin = async (dispatch, user) => {
+
   dispatch(loginStart());
 
   try {
@@ -27,6 +30,7 @@ export const attemptLogin = async (dispatch, user) => {
 };
 
 
+// MOCK LOGOUT
 export const attemptLogout = async (dispatch) => {
   dispatch(logoutStart());
   
@@ -37,3 +41,16 @@ export const attemptLogout = async (dispatch) => {
     dispatch(logoutFailure())
   }
 };
+
+
+//GET ALL USERS - Display them on the home page
+export const getAllUsers = async (dispatch) => {
+  dispatch(getAllUsersStart())
+  
+  try {
+    const res = await axiosInstance.get('/users');
+    dispatch(getAllUsersSuccess(res.data))
+  } catch (err) {
+    dispatch(getAllUsersFail())
+  }
+}
