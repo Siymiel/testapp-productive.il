@@ -1,32 +1,30 @@
 /* eslint-disable prettier/prettier */
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { NextArrow, PrevArrow } from "../arrows/Arrows";
 import Cta001 from "../cards/Cta001";
 import Cta002 from "../cards/Cta002";
 import Cta003 from "../cards/Cta003";
 
-export default class CtaCarousel extends Component {
+export default class TestimonialCarousel extends Component {
   render() {
     const settings = {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 2,
+      fade: true,
+      slidesToShow: 1,
       slidesToScroll: 1,
       swipeToSlide: true,
       autoplay: true,
       autoplaySpeed: 3500,
       pauseOnHover: true,
       cssEase: "linear",
-      nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />,
       responsive: [
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             infinite: true,
             dots: true
           }
@@ -34,8 +32,8 @@ export default class CtaCarousel extends Component {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             initialSlide: 2
           }
         },

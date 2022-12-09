@@ -43,7 +43,7 @@ const UserModal = ({ modalOpen1, handleCloseClick1 }) => {
 
             <div className="p-6 space-y-6 bg-gray-800">
               <p className="text-base font-light leading-relaxed text-gray-100">
-                Hello, my name is <span className="text-3xl text-red-500">{user?.username}</span>
+                Hello, my username is <span className="text-3xl text-red-500">{user?.username}</span>
               </p>
             </div>
           </div>

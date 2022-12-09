@@ -61,7 +61,6 @@ export const getSingleUser = async (dispatch, id) => {
 
   try {
     const res = await axiosInstance.get(`/users/${id}`);
-    console.log("RES", res.data)
     dispatch(getSingleUserSuccess(res.data))
   } catch (err) {
     dispatch(getSingleUserFail())

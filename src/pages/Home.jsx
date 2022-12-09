@@ -10,6 +10,8 @@ import RatingSection from '../components/sections/RatingSection';
 import UserModal from '../components/UserModal';
 import { useDispatch } from 'react-redux';
 import { getSingleUser } from '../redux/apiCalls';
+import TestimonialSection from '../components/sections/TestimonialSection';
+import NoticeSection from '../components/sections/NoticeSection';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -38,6 +40,8 @@ const Home = () => {
     <Modal modalOpen={modalOpen} handleCloseClick={handleCloseClick}/>
     <UserSection />
     <CtaSection />
+    <TestimonialSection />
+    <NoticeSection />
     <RatingSection handleOpenClick1={handleOpenClick1}/>
     <UserModal modalOpen1={modalOpen1} handleCloseClick1={handleCloseClick1}/>
     <Footer />

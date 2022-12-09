@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import UserCard001 from '../cards/UserCard001';
 import { getAllUsers } from '../../redux/apiCalls';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 const RatingSection = ({ handleOpenClick1 }) => {
@@ -19,8 +20,10 @@ const RatingSection = ({ handleOpenClick1 }) => {
       <div className="text-center text-4xl font-light uppercase">
         <h2>Data Component</h2>
       </div>
-      <p className='text-sm font-light pt-2 text-center'>The data below has been fetched from the jsonplaceholder API (Except for the image)</p>
-      <p className='text-sm font-light pt-2 text-center'>Click the search icon to dynamically change the name</p>
+      <p className='text-sm font-light pt-2 text-center'>The data below has been fetched from the jsonplaceholder API (
+        <Link to="https://jsonplaceholder.typicode.com/users" className='text-red-400'> https://jsonplaceholder.typicode.com/users </Link>
+        ) (Except for the image)</p>
+      <p className='text-sm font-light pt-2 text-center'>Click the search icon to dynamically change the username</p>
       <div className='grid grid-cols-4 gap-6 max-w-full mx-auto px-10 pt-10'>
       {
         users && users.map(user => <UserCard001 key={user.id} username={user?.username} handleOpenClick1={handleOpenClick1} id={user?.id} />)
