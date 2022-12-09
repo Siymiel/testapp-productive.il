@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     allUsers: null,
+    singleUser: null,
     isFetching: false,
     error: false
 };
@@ -21,9 +22,27 @@ export const usersSlice = createSlice({
         getAllUsersFail: (state) => {
             state.isFetching = false;
             state.error = true
+        },
+        getSingleUserStart: (state) => {
+            state.isFetching = true;
+        },
+        getSingleUserSuccess: (state, action) => {
+            state.isFetching = false;
+            state.singleUser = action.payload
+        },
+        getSingleUserFail: (state) => {
+            state.isFetching = false;
+            state.error = true;
         }
     }
 });
 
-export const { getAllUsersStart, getAllUsersSuccess, getAllUsersFail } = usersSlice.actions
+export const { 
+    getAllUsersStart, 
+    getAllUsersSuccess, 
+    getAllUsersFail, 
+    getSingleUserStart, 
+    getSingleUserSuccess, 
+    getSingleUserFail 
+} = usersSlice.actions
 export default usersSlice.reducer

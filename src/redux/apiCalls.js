@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { axiosInstance } from '../axiosInstances';
 import { loginStart, loginSuccess, loginFailure, logoutStart, logoutSuccess, logoutFailure } from './userSlice';
-import { getAllUsersStart, getAllUsersSuccess, getAllUsersFail } from './usersSlice';
+import { getAllUsersStart, getAllUsersSuccess, getAllUsersFail, getSingleUserStart, getSingleUserSuccess, getSingleUserFail } from './usersSlice';
 import { toast } from 'react-hot-toast';
 
 // MOCK LOGIN
@@ -53,4 +53,17 @@ export const getAllUsers = async (dispatch) => {
   } catch (err) {
     dispatch(getAllUsersFail())
   }
+}
+
+// GET A SINGLE USER
+export const getSingleUser = async (dispatch, id) => {  
+  dispatch(getSingleUserStart())
+
+  try {
+    const res = await axiosInstance.get(`/users/${id}`);
+    console.log("RES", res.data)
+    dispatch(getSingleUserSuccess(res.data))
+  } catch (err) {
+    dispatch(getSingleUserFail())
+  } 
 }

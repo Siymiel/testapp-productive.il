@@ -1,9 +1,7 @@
 /* eslint-disable prettier/prettier */
 import styled from 'styled-components';
-import { BsCart3 } from 'react-icons/bs';
 import { RiSearchLine } from 'react-icons/ri';
 import { MdFavoriteBorder } from 'react-icons/md';
-import { Link } from 'react-router-dom';
 
 const Info = styled.div`
   opacity: 0;
@@ -68,22 +66,25 @@ const Icon = styled.div`
   }
 `;
 
-const UserCard001 = () => {
+const Div = styled.div`
+`;
+const Span = styled.span``;
+
+// eslint-disable-next-line react/prop-types
+const UserCard001 = ({username, id, handleOpenClick1}) => {
   return (
     <Container>
-      <div className="absolute z-10 top-2 left-2 bg-gray-800 text-white text-xs uppercase font-light py-1 px-3">
-        <span>11% off</span>
-      </div>
+      <Div className="absolute z-10 top-2 left-2 bg-gray-800 text-white text-xs uppercase font-light py-1 px-3">
+        <Span>{username}</Span>
+      </Div>
       <Circle />
-      <Image src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=404&q=80" />
+      <Image src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" />
+      {/* <Image src={avatar} /> */}
       <Info>
-        <Icon>
-          <BsCart3 />
-        </Icon>
-        <Icon>
-          <Link to="/product/1">
+        <Icon onClick={() => handleOpenClick1(id)}>
+          <Div>
             <RiSearchLine />
-          </Link>
+          </Div>
         </Icon>
         <Icon>
           <MdFavoriteBorder />
