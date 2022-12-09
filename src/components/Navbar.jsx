@@ -3,6 +3,11 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { RxMagnifyingGlass } from 'react-icons/rx'
 import Logo from './Logo'
+import { Link } from 'react-router-dom'
+import { BiBell } from 'react-icons/bi';
+import { RxCross2, RxHamburgerMenu } from 'react-icons/rx';
+import { useDispatch } from 'react-redux';
+import { attemptLogout } from '../redux/apiCalls'
 // import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 function classNames(...classes) {
@@ -10,53 +15,40 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+
+  const handleLogout = (e) => {
+    e.preventDefault()
+    attemptLogout(dispatch)
+  }
+
   return (
-    <nav className='sticky top-0 z-20'>
+    <nav className='sticky top-0 z-20 pb-1'>
+        <div className='bg-black py-3'></div>
         <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
+          <div className="mx-auto max-w-7xl py-2 px-2 sm:px-4 lg:px-8">
             <div className="flex h-16 justify-between">
               <div className="flex px-2 lg:px-0">
                 <div className="flex flex-shrink-0 items-center">
-                  {/* <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
-                  />
-                  <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
-                  /> */}
-                  <Logo />
+                  <Link to="/">
+                    <Logo />
+                  </Link>
                 </div>
                 <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
-                  {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                  <a
-                    href="#"
-                    className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                  <Link
+                    to="/"
+                    className="inline-flex items-center border-b-2 border-[#1fb6ff] px-1 pt-1 text-lg font-light text-gray-900"
                   >
-                    Dashboard
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                    Home
+                  </Link>
+                  <Link
+                    to="/profile"
+                    className="inline-flex items-center px-1 pt-1 text-lg font-light text-gray-900"
                   >
-                    Team
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                  >
-                    Projects
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                  >
-                    Calendar
-                  </a>
+                    Profile
+                  </Link>
                 </div>
               </div>
               <div className="flex flex-1 items-center justify-center px-2 lg:ml-6 lg:justify-end">
@@ -72,7 +64,7 @@ const Navbar = () => {
                     <input
                       id="search"
                       name="search"
-                      className="block w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-3 leading-5 placeholder-gray-500 focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-3 leading-5 placeholder-gray-500 focus:border-[#1fb6ff] focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#1fb6ff] sm:text-sm font-light"
                       placeholder="Search"
                       type="search"
                     />
@@ -81,32 +73,32 @@ const Navbar = () => {
               </div>
               <div className="flex items-center lg:hidden">
                 {/* Mobile menu button */}
-                {/* <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                    <RxCross2 className="block h-6 w-6" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                    <RxHamburgerMenu className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
               <div className="hidden lg:ml-4 lg:flex lg:items-center">
                 <button
                   type="button"
-                  className="flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1fb6ff] focus:ring-offset-2"
                 >
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button> */}
+                  <BiBell className="h-6 w-6" aria-hidden="true" />
+                </button>
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-4 flex-shrink-0">
                   <div>
-                    <Menu.Button className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                    <Menu.Button className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#1fb6ff] focus:ring-offset-2">
                       <span className="sr-only">Open user menu</span>
                       <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        className="h-8 w-8 rounded-full object-cover object-center"
+                        src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                         alt=""
                       />
                     </Menu.Button>
@@ -123,32 +115,32 @@ const Navbar = () => {
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
+                          <Link
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-gray-700 font-light')}
                           >
                             Your Profile
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
+                          <Link
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-gray-700 font-light')}
                           >
                             Settings
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          <div
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-gray-700 font-light cursor-pointer')}
+                            onClick={handleLogout}
                           >
                             Sign out
-                          </a>
+                          </div>
                         )}
                       </Menu.Item>
                     </Menu.Items>
@@ -164,7 +156,7 @@ const Navbar = () => {
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
+                className="block border-l-4 border-[#1fb6ff] bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-[#1fb6ff]"
               >
                 Dashboard
               </Disclosure.Button>
@@ -194,8 +186,8 @@ const Navbar = () => {
               <div className="flex items-center px-4">
                 <div className="flex-shrink-0">
                   <img
-                    className="h-10 w-10 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    className="h-10 w-10 rounded-full object-cover object-center"
+                    src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                     alt=""
                   />
                 </div>
@@ -205,7 +197,7 @@ const Navbar = () => {
                 </div>
                 <button
                   type="button"
-                  className="ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1fb6ff] focus:ring-offset-2"
                 >
                   <span className="sr-only">View notifications</span>
                   {/* <BellIcon className="h-6 w-6" aria-hidden="true" /> */}
@@ -230,6 +222,7 @@ const Navbar = () => {
                   as="a"
                   href="#"
                   className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
+                  onClick={handleLogout}
                 >
                   Sign out
                 </Disclosure.Button>
