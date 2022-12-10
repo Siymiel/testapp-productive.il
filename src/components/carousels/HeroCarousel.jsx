@@ -65,12 +65,10 @@ const InfoContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 55px;
 `;
 
 const Desc = styled.p`
   margin: 20px 0px;
-  font-size: 20px;
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -78,7 +76,6 @@ const Desc = styled.p`
 
 const Button = styled.button`
   padding: 10px;
-  font-size: 16px;
   border: 1px solid;
   background-color: transparent;
   cursor: pointer;
@@ -107,15 +104,15 @@ const HeroSlider = ({ handleOpenClick }) => {
               <Image src={item.img} />
             </ImgContainer>
               
-            <InfoContainer className='mt-20'>
-              <div className='grid gap-24'>
-                <div className='w-36 h-36 p-2 rounded-full border border-red-400 grid justify-center items-center'>
+            <InfoContainer className='mt-5 lg:mt-20'>
+              <div className='grid'>
+                <div className='w-36 h-36 p-2 rounded-full border border-red-400 grid justify-center items-center opacity-20'>
                   <RxFramerLogo className="w-20 h-20" />
                 </div>
-                <Title className="-mt-20">{item.title}</Title>
+                <Title className="-mt-20 text-3xl md:text-4xl lg:text-5xl border-b z-10">{item.title}</Title>
               </div>
-              <Desc>{item.desc}</Desc>
-                <Button onClick={handleOpenClick}>READ MORE</Button>
+              <Desc className='text-base md:text-lg lg:text-xl'>{item.desc}</Desc>
+                <Button className='mt-5 md:mt-10 text-sm md:text-base' onClick={handleOpenClick}>READ MORE</Button>
             </InfoContainer>
           </Slide>
         ))}

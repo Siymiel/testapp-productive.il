@@ -30,7 +30,7 @@ export const sliderItems = [
   },
   {
     id: 5,
-    img: 'https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80 ',
+    img: 'https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1093&q=80',
     title: 'MACHINE LEARNING',
     desc: 'What does it really take to understand Machine Learning',
     bg: 'f0fff9'

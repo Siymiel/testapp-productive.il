@@ -137,37 +137,6 @@ const Navbar = () => {
           </div>
 
           <Disclosure.Panel className="lg:hidden">
-            <div className="space-y-1 pt-2 pb-3">
-              {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800" */}
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block border-l-4 border-[#1fb6ff] bg-indigo-50 py-2 pl-3 pr-4 text-base font-light text-[#1fb6ff]"
-              >
-                Dashboard
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-light text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
-              >
-                Team
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-light text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
-              >
-                Projects
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-light text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
-              >
-                Calendar
-              </Disclosure.Button>
-            </div>
             <div className="border-t border-gray-200 pt-4 pb-3">
               <div className="flex items-center px-4">
                 <div className="flex-shrink-0">
@@ -178,8 +147,8 @@ const Navbar = () => {
                   />
                 </div>
                 <div className="ml-3">
-                  <div className="text-base font-light text-gray-800">Samuel</div>
-                  <div className="text-sm font-light text-gray-500">skiuthia77@example.com</div>
+                  <div className="text-lg font-light text-gray-800">Samuel</div>
+                  <div className="text-sm font-light text-gray-500">skinuthia77@gmail.com</div>
                 </div>
                 <button
                   type="button"
@@ -196,7 +165,7 @@ const Navbar = () => {
                   Your Profile
                 </Link>
                 <div
-                  className="block px-4 py-2 text-base font-light text-gray-500 hover:bg-gray-100 hover:text-gray-800"
+                  className="block px-4 py-2 text-base font-light text-gray-500 hover:bg-gray-100 hover:text-gray-800 cursor-pointer"
                   onClick={handleLogout}
                 >
                   Sign out
