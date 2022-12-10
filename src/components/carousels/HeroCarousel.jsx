@@ -12,6 +12,9 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+  @media(max-width: 480px) {
+    height: 50vh;
+  };
   ${mobile({ display: 'none' })}
 `;
 
@@ -57,6 +60,9 @@ const Image = styled.img`
   height: 85%;
   width: 100%;
   object-fit: cover;
+  @media(max-width: 480px) {
+    height: 50%
+  }
 `;
 
 const InfoContainer = styled.div`
