@@ -1,9 +1,10 @@
 /* eslint-disable prettier/prettier */
+import Quote from '../../images/quote.jpeg'
 
 const NoticeSection = () => {
   const style = {
     backgroundImage:
-      "url('https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')"
+      `url(${Quote})`
   };
   return(
     <div className="w-full h-72 md:h-96 mt-28 bg-cover bg-center relative grid items-center justify-center" style={style}>

@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react/prop-types */
 import { useEffect } from 'react';
-import UserCard001 from '../cards/UserCard001';
+import DataCard from '../cards/DataCard';
 import { getAllUsers } from '../../redux/apiCalls';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -26,7 +26,7 @@ const DataSection = ({ handleOpenClick1 }) => {
       <p className='text-sm font-light pt-2 text-center'>Click the search icon to dynamically change the username</p>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-4 lg:gap-6 max-w-full mx-auto px-10 pt-10'>
       {
-        users && users.map(user => <UserCard001 key={user.id} username={user?.username} handleOpenClick1={handleOpenClick1} id={user?.id} />)
+        users && users.map(user => <DataCard key={user.id} username={user?.username} handleOpenClick1={handleOpenClick1} id={user?.id} />)
       }
       </div>
     </section>

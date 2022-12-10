@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
+import Irene from '../../images/irene.avif'
 
 const Cta001 = () => {
   return (
@@ -8,8 +9,7 @@ const Cta001 = () => {
     <div
       className="bg-cover bg-center w-full h-72 md:h-80 lg:h-96 rounded-xl grid items-center"
       style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1505421031134-e57263cae630?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=845&q=80')"
+        backgroundImage: `url(${Irene})`
       }}>
       <div>
         <div className="px-4 md:px-10">

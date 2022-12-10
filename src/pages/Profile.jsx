@@ -4,6 +4,7 @@ import ProfileDetail from '../components/ProfileDetail';
 import Attachement from '../components/Attachement';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Avatar from '../images/avatar.avif'
 
 const Profile = () => {
   return (
@@ -11,7 +12,7 @@ const Profile = () => {
       <Navbar />
     <section className='max-w-full mx-auto px-20 mt-10'>
       <div className='flex items-center space-x-5'>
-        <img className='w-28 md:w-36 h-28 md:h-36 rounded-full object-cover object-center border-2 border-[#1fb6ff]' src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="avatar"/>
+        <img className='w-28 md:w-36 h-28 md:h-36 rounded-full object-cover object-center border-2 border-[#1fb6ff]' src={Avatar} alt="avatar"/>
         <div>
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-light leading-6 text-gray-900">User Profile</h3>
           <p className="mt-3 font-light max-w-2xl text-sm md:text-base text-gray-500">Profile details and attachments.</p>

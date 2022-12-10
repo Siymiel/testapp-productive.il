@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
+import Macbook from '../../images/macbook.webp'
 
 const Cta002 = () => {
   return (
@@ -8,8 +9,7 @@ const Cta002 = () => {
     <div
       className="bg-cover bg-center w-full h-72 md:h-80 lg:h-96 rounded-xl grid items-center"
       style={{
-        backgroundImage:
-          "url('https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&w=600')"
+        backgroundImage: `url(${Macbook})`
       }}>
       <div>
         <div className="px-10">

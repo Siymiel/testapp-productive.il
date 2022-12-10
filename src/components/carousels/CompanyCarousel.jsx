@@ -3,6 +3,19 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import { NextArrow, PrevArrow } from "../arrows/Arrows";
 import CompanyCard from "../cards/CompanyCard";
+import Ihub from '../../images/ihub.jpeg'
+import Google from '../../images/google.webp'
+import Twitter from '../../images/twitter.avif'
+import Andela from '../../images/andela.avif'
+import VmWare from '../../images/vmware.webp'
+import Xoriant from '../../images/xoriant.jpeg'
+import Wipro from '../../images/wipro.webp'
+import Verizon from '../../images/verizon.webp'
+import Ibm from '../../images/ibm.jpeg'
+import Turing from '../../images/turing.webp'
+import PexelInc from '../../images/pexelinc.webp'
+import Spacex from '../../images/spacex.avif'
+import Apple from '../../images/apple.avif'
 
 export default class CompanyCarousel extends Component {
   render() {
@@ -50,55 +63,55 @@ export default class CompanyCarousel extends Component {
       <div className="pt-10 px-10 ">
         <Slider {...settings}>
             <CompanyCard
-            url="https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            url={Ihub}
             title="IHub"
             />
             <CompanyCard
-            url="https://images.pexels.com/photos/193003/pexels-photo-193003.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            url={Google}
             title="Google"
             />
             <CompanyCard
-            url="https://images.unsplash.com/photo-1595325281545-e7d6cdd5f95d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            url={Twitter}
             title="Twitter"
             />
             <CompanyCard
-            url="https://images.unsplash.com/photo-1561993090-b7c00b87852a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+            url={Andela}
             title="Andela"
             />
             <CompanyCard
-            url="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            url={VmWare}
             title="VMware"
             />
             <CompanyCard
-            url="https://images.pexels.com/photos/340152/pexels-photo-340152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            url={Xoriant}
             title="Xoriant"
             />
             <CompanyCard
-            url="https://images.pexels.com/photos/1181376/pexels-photo-1181376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            url={Wipro}
             title="Wipro"
             />
             <CompanyCard
-            url="https://images.pexels.com/photos/1181341/pexels-photo-1181341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            url={Verizon}
             title="Verizon"
             />
             <CompanyCard
-            url="https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            url={Ibm}
             title="IBM"
             />
             <CompanyCard
-            url="https://images.pexels.com/photos/3201587/pexels-photo-3201587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            url={Turing}
             title="Turing"
             />
             <CompanyCard
-            url="https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            url={PexelInc}
             title="PexelInc"
             />
             <CompanyCard
-            url="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            url={Spacex}
             title="SpaceX"
             />
             <CompanyCard
-            url="https://images.unsplash.com/photo-1612097099760-3bb8af85cd74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=849&q=80"
+            url={Apple}
             title="Apple"
             />
         </Slider>

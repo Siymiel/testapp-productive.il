@@ -6,6 +6,7 @@ import { CiUser } from 'react-icons/ci';
 import { attemptLogin } from '../redux/apiCalls';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import LoginImg from '../images/login.avif'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -94,7 +95,7 @@ const Login = () => {
         className="h-full bg-cover bg-center hidden md:block"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/file-1636585210491-f28ca34ea8ecimage?dpr=2&auto=format&fit=crop&w=416&q=60')"
+            `url(${LoginImg})`
         }}></section>
     </div>
   );

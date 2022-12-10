@@ -8,6 +8,7 @@ import { RxCross2, RxHamburgerMenu } from 'react-icons/rx';
 import { useDispatch, useSelector } from 'react-redux';
 import { attemptLogout } from '../redux/apiCalls'
 import { useNavigate, useLocation } from 'react-router-dom';
+import Avatar from '../images/avatar.avif'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -94,7 +95,7 @@ const Navbar = () => {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full object-cover object-center"
-                        src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                        src={Avatar}
                         alt=""
                       />
                     </Menu.Button>
@@ -142,7 +143,7 @@ const Navbar = () => {
                 <div className="flex-shrink-0">
                   <img
                     className="h-10 w-10 rounded-full object-cover object-center"
-                    src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    src={Avatar}
                     alt=""
                   />
                 </div>
