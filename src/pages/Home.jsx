@@ -12,6 +12,8 @@ import { useDispatch } from 'react-redux';
 import { getSingleUser } from '../redux/apiCalls';
 import TestimonialSection from '../components/sections/TestimonialSection';
 import QuoteSection from '../components/sections/QuoteSection';
+import PartnerCarousel from '../components/carousels/PartnerCarousel';
+
 import { ScrolltoTop } from '../components/arrows/Arrows';
 
 const Home = () => {
@@ -47,6 +49,7 @@ const Home = () => {
     <QuoteSection />
     <DataSection handleOpenClick1={handleOpenClick1}/>
     <UserModal modalOpen1={modalOpen1} handleCloseClick1={handleCloseClick1}/>
+    <PartnerCarousel />
     <ScrolltoTop />
     <Footer />
   </>
