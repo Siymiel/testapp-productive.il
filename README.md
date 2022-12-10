@@ -23,7 +23,7 @@ Below are the login credentials
 
 This is a fully responsive React App.
 
-It clearly demonstrated my ability to work with React.
+It clearly demonstrated my ability to use React in UI development.
 
 ### It includes the folowing features
 
