@@ -4,13 +4,13 @@ import ProfileDetail from '../components/ProfileDetail';
 import Attachement from '../components/Attachement';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Avatar from '../images/avatar.avif'
+import Avatar from '../images/avatar.jpg'
 
 const Profile = () => {
   return (
     <main>
       <Navbar />
-    <section className='max-w-full mx-auto px-20 mt-10'>
+    <section className='max-w-full mx-auto px-5 lg:px-20 mt-10'>
       <div className='flex items-center space-x-5'>
         <img className='w-28 md:w-36 h-28 md:h-36 rounded-full object-cover object-center border-2 border-[#1fb6ff]' src={Avatar} alt="avatar"/>
         <div>

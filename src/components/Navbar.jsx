@@ -8,7 +8,7 @@ import { RxCross2, RxHamburgerMenu } from 'react-icons/rx';
 import { useDispatch, useSelector } from 'react-redux';
 import { attemptLogout } from '../redux/apiCalls'
 import { useNavigate, useLocation } from 'react-router-dom';
-import Avatar from '../images/avatar.avif'
+import Avatar from '../images/avatar.jpg'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -28,11 +28,11 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='sticky top-0 z-20 pb-1'>
-        <div className='bg-black py-3'></div>
+      <nav className='sticky top-0 z-20'>
+      <div className='bg-black py-3'></div>
         <Disclosure as="nav" className="bg-white shadow">
       {({ open }) => (
-        <>
+        <div>
           <div className="mx-auto max-w-7xl py-2 px-2 sm:px-4 lg:px-8">
             <div className="flex h-16 justify-between">
               <div className="flex px-2 lg:px-0">
@@ -78,7 +78,7 @@ const Navbar = () => {
               </div>
               <div className="flex items-center lg:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-[#1fb6ff]">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <RxCross2 className="block h-6 w-6" aria-hidden="true" />
@@ -149,7 +149,7 @@ const Navbar = () => {
                 </div>
                 <div className="ml-3">
                   <div className="text-lg font-light text-gray-800">Samuel</div>
-                  <div className="text-sm font-light text-gray-500">skinuthia77@gmail.com</div>
+                  <div className="text-xs font-light text-gray-500">skinuthia77@gmail.com</div>
                 </div>
                 <button
                   type="button"
@@ -158,15 +158,15 @@ const Navbar = () => {
                   <span className="sr-only">View notifications</span>
                 </button>
               </div>
-              <div className="mt-3 space-y-1">
+              <div className="mt-3">
                 <Link
                   to="/profile"
-                  className="block px-4 py-2 text-base font-light text-gray-500 hover:bg-gray-100 hover:text-gray-800"
+                  className="block px-4 py-1 text-base font-light text-gray-500 hover:bg-gray-100 hover:text-gray-800"
                 >
                   Your Profile
                 </Link>
                 <div
-                  className="block px-4 py-2 text-base font-light text-gray-500 hover:bg-gray-100 hover:text-gray-800 cursor-pointer"
+                  className="block px-4 py-1 text-base font-light text-gray-500 hover:bg-gray-100 hover:text-gray-800 cursor-pointer"
                   onClick={handleLogout}
                 >
                   Sign out
@@ -174,7 +174,7 @@ const Navbar = () => {
               </div>
             </div>
           </Disclosure.Panel>
-        </>
+        </div>
       )}
     </Disclosure>
     </nav>

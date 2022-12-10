@@ -12,19 +12,19 @@ export default class TestimonialCarousel extends Component {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 2000,
       fade: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       swipeToSlide: true,
       autoplay: true,
-      autoplaySpeed: 3500,
+      autoplaySpeed: 7000,
       pauseOnHover: true,
       cssEase: "linear"
     };
 
     return (
-      <div className="pt-10 px-10">
+      <div className="pt-10 px-5 lg:px-10">
         <Slider {...settings}>
             <Testimony imageUrl={Testimonial1} name="Samanta Hopkins"/>
             <Testimony imageUrl={Testimonial2} name="Trevor Wonder"/>

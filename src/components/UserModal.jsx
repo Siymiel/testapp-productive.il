@@ -12,13 +12,12 @@ const UserModal = ({ modalOpen1, handleCloseClick1 }) => {
         id="defaultModal"
         tabIndex="-1"
         aria-hidden="true"
-        className={`fixed z-50 w-full p-1 overflow-x-hidden overflow-y-auto top-28 h-modal md:h-full transition-all ${modalOpen1 ? 'grid' : 'hidden'}`}>
-          {/* <div className={`inset-0 ${modalOpen ? 'absolute' : 'hidden'} bg-black`}></div> */}
-        <div className="relative w-full h-full max-w-2xl md:h-auto">
-          <div className="relative bg-gray-900 border border-teal-400 rounded-lg">
-            <div className="flex items-start justify-between p-4 border-b border-gray-500 rounded-t">
-              <h3 className="text-3xl font-semibold text-white">
-               {user?.username}
+        className={`fixed z-50 w-full p-1 overflow-x-hidden overflow-y-auto top-28 h-modal md:h-full transition-all px-7 ${modalOpen1 ? 'grid' : 'hidden'}`}>
+        <div className="relative w-full h-full max-w-md md:max-w-2xl md:h-auto">
+          <div className="relative bg-gray-900 border border-blue-400 rounded-lg">
+            <div className="flex items-start justify-between p-2 md:p-4 border-b border-gray-500 rounded-t">
+              <h3 className="text-base md:text-2xl lg:text-3xl font-normal text-white">
+               Dynamic Content Display
               </h3>
               <button
                 type="button"
@@ -41,9 +40,9 @@ const UserModal = ({ modalOpen1, handleCloseClick1 }) => {
               </button>
             </div>
 
-            <div className="p-6 space-y-6 bg-gray-100">
-              <p className="text-xl font-light leading-relaxed text-gray-800">
-                Hello, my username is <span className="text-3xl text-red-500">{user?.username}</span>
+            <div className="p-3 md:p-4 lg:p-6 space-y-6 bg-gray-100">
+              <p className="text-sm lg:text-xl font-light leading-relaxed text-gray-800">
+                Hello, my username is <span className="text-lg md:text-3xl text-blue-500">{user?.username}</span>
               </p>
             </div>
           </div>

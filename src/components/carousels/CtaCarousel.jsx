@@ -10,12 +10,12 @@ export default class CtaCarousel extends Component {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 2400,
       slidesToShow: 2,
       slidesToScroll: 1,
       swipeToSlide: true,
       autoplay: true,
-      autoplaySpeed: 3500,
+      autoplaySpeed: 7000,
       pauseOnHover: true,
       cssEase: "linear",
       responsive: [
@@ -40,18 +40,25 @@ export default class CtaCarousel extends Component {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            dots: true
           }
         }
       ]
     };
 
     return (
-      <div className="pt-10 px-10">
+      <div className="pt-10 px-3 lg:px-10">
         <Slider {...settings}>
+          <div className="px-3">
             <Cta001 />
+          </div>
+          <div className="px-3">
             <Cta002 />
+          </div>
+          <div className="px-3">
             <Cta003 />
+          </div>
         </Slider>
       </div>
     );

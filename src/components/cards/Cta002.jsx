@@ -12,7 +12,7 @@ const Cta002 = () => {
         backgroundImage: `url(${Macbook})`
       }}>
       <div>
-        <div className="px-10">
+        <div className="px-5 lg:px-10">
           <p className="text-[#7F5646] pb-3 font-semibold text-lg">Quality Product</p>
           <h2 className="font-extrabold  text-3xl md:text-4xl">Macbook Air</h2>
           <h2 className="text-gray-700 font-extrabold  text-3xl md:text-4xl">Career Finder</h2>

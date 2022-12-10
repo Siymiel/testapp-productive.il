@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import styled from 'styled-components';
 import { RiSearchLine } from 'react-icons/ri';
-import DataUser from '../../images/datauser.avif'
+import DataUser from '../../images/datauser.jpg'
 
 const Info = styled.div`
   opacity: 0;

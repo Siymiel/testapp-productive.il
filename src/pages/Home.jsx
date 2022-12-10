@@ -19,21 +19,25 @@ import { ScrolltoTop } from '../components/arrows/Arrows';
 const Home = () => {
   const dispatch = useDispatch();
 
-  // Modal
+
   const [modalOpen, setModalOpen] = useState(false);
+
   const handleOpenClick = () => {
       setModalOpen(true)
   }
+
+
   const handleCloseClick = () => {
       setModalOpen(false)
   }
 
-  // Modal 1
   const [modalOpen1, setModalOpen1] = useState(false)
+
   const handleOpenClick1 = (id) => {
       setModalOpen1(true)
       getSingleUser(dispatch, id)
   }
+
   const handleCloseClick1 = () => {
       setModalOpen1(false)
   }

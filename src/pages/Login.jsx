@@ -6,7 +6,7 @@ import { CiUser } from 'react-icons/ci';
 import { attemptLogin } from '../redux/apiCalls';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import LoginImg from '../images/login.avif'
+import LoginImg from '../images/login.jpg'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -28,7 +28,7 @@ const Login = () => {
       className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center bg-cover bg-center"
       style={{ height: '100vh' }}>
       <section>
-        <div className="max-w-md mx-auto flex items-center space-x-3">
+        <div className="max-w-md mx-auto flex items-center space-x-3 px-10">
           <div className="w-12 h-12 p-2 rounded-full border border-gray-900 grid items-center justify-center">
             <CiUser className="w-8 h-8" />
           </div>

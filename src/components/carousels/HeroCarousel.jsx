@@ -3,7 +3,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { sliderItems } from '../../data';
-import { mobile } from '../../responsive';
+// import { mobile } from '../../responsive';
 import { RxFramerLogo } from 'react-icons/rx';
 
 const Container = styled.div`
@@ -15,8 +15,8 @@ const Container = styled.div`
   @media(max-width: 754px) {
     height: 50vh;
   };
-  ${mobile({ display: 'none' })}
 `;
+//   ${mobile({ display: 'none' })}
 
 const Arrow = styled.div`
   width: 50px;
@@ -67,8 +67,8 @@ const Image = styled.img`
 
 const InfoContainer = styled.div`
   flex: 1;
-  padding: 40px;
 `;
+//   padding: 40px;
 
 const Title = styled.h1`
 `;
@@ -110,15 +110,15 @@ const HeroSlider = ({ handleOpenClick }) => {
               <Image src={item.img} />
             </ImgContainer>
               
-            <InfoContainer className='mt-5 lg:mt-20'>
+            <InfoContainer className='mt-5 lg:mt-20 p-4 lg:p-10'>
               <div className='grid'>
-                <div className='w-36 h-36 p-2 rounded-full border border-red-400 grid justify-center items-center opacity-20'>
+                <div className='w-36 h-36 p-2 rounded-full border border-red-400 grid justify-center items-center opacity-10'>
                   <RxFramerLogo className="w-20 h-20" />
                 </div>
-                <Title className="-mt-20 text-3xl md:text-4xl lg:text-5xl border-b z-10">{item.title}</Title>
+                <Title className="-mt-20 text-2xl md:text-4xl lg:text-5xl border-b z-10">{item.title}</Title>
               </div>
-              <Desc className='text-base md:text-lg lg:text-xl'>{item.desc}</Desc>
-                <Button className='mt-5 md:mt-10 text-sm md:text-base' onClick={handleOpenClick}>READ MORE</Button>
+              <Desc className='text-sm md:text-lg lg:text-xl'>{item.desc}</Desc>
+                <Button className='mt-1 md:mt-10 text-xs sm:text-sm md:text-base' onClick={handleOpenClick}>READ MORE</Button>
             </InfoContainer>
           </Slide>
         ))}

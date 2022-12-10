@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
-import image001 from './images/image001.avif'
-import image002 from './images/image002.avif'
-import image003 from './images/image003.avif';
-import image004 from './images/image004.avif';
-import image005 from './images/image005.avif';
+import image001 from './images/image001.jpg'
+import image002 from './images/image002.jpg'
+import image003 from './images/image003.jpg';
+import image004 from './images/image004.jpg';
+import image005 from './images/image005.jpg';
 
 export const sliderItems = [
   {

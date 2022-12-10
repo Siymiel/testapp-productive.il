@@ -12,5 +12,5 @@ export function PrevArrow({ onClick, className, style }) {
 }
 
 export function ScrolltoTop() {
-  return <ScrollToTop smooth component={<BiUpArrow className='w-6 h-6 ml-2'/>}/>
+  return <ScrollToTop smooth component={<BiUpArrow className='w-6 h-6 ml-2 z-30'/>}/>
 }

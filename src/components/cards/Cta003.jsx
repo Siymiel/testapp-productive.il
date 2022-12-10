@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
-import Hackathon from '../../images/hackathon.avif'
+import Hackathon from '../../images/hackathon.jpg'
 
 const Cta002 = () => {
   return (
@@ -13,7 +13,7 @@ const Cta002 = () => {
           `url(${Hackathon})`
       }}>
       <div>
-        <div className="px-10">
+        <div className="px-5 lg:px-10">
           <p className="text-[#ffffff] pb-3 font-semibold text-lg">Hackathon</p>
           <h2 className="font-extrabold text-3xl md:text-4xl text-[#1fb6ff]">Google</h2>
           <h2 className="text-[#1fb6ff] font-extrabold text-3xl md:text-4xl">Africa DevFest</h2>
