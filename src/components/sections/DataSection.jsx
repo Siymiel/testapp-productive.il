@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 
-const RatingSection = ({ handleOpenClick1 }) => {
+const DataSection = ({ handleOpenClick1 }) => {
   const dispatch = useDispatch();
   const users = useSelector(state => state.users.users)
 
@@ -33,4 +33,4 @@ const RatingSection = ({ handleOpenClick1 }) => {
   );
 };
 
-export default RatingSection;
+export default DataSection;

@@ -1,16 +1,16 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import UserCarousel from '../carousels/UserCarousel';
+import CompanyCarousel from '../carousels/CompanyCarousel';
 
-const UserSection = () => {
+const CompanySection = () => {
   return (
     <section className="mt-20">
       <div className="text-center text-3xl md:text-4xl font-light uppercase">
         <h2>Top Hiring Companies</h2>
       </div>
-      <UserCarousel />
+      <CompanyCarousel />
     </section>
   );
 };
 
-export default UserSection;
+export default CompanySection;

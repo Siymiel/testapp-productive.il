@@ -2,9 +2,9 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { NextArrow, PrevArrow } from "../arrows/Arrows";
-import UserCard from "../cards/UserCard";
+import CompanyCard from "../cards/CompanyCard";
 
-export default class UserCarousel extends Component {
+export default class CompanyCarousel extends Component {
   render() {
     const settings = {
       dots: true,
@@ -49,55 +49,55 @@ export default class UserCarousel extends Component {
     return (
       <div className="pt-10 px-10 ">
         <Slider {...settings}>
-            <UserCard
+            <CompanyCard
             url="https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             title="IHub"
             />
-            <UserCard
+            <CompanyCard
             url="https://images.pexels.com/photos/193003/pexels-photo-193003.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             title="Google"
             />
-            <UserCard
+            <CompanyCard
             url="https://images.unsplash.com/photo-1595325281545-e7d6cdd5f95d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
             title="Twitter"
             />
-            <UserCard
+            <CompanyCard
             url="https://images.unsplash.com/photo-1561993090-b7c00b87852a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
             title="Andela"
             />
-            <UserCard
+            <CompanyCard
             url="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             title="VMware"
             />
-            <UserCard
+            <CompanyCard
             url="https://images.pexels.com/photos/340152/pexels-photo-340152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             title="Xoriant"
             />
-            <UserCard
+            <CompanyCard
             url="https://images.pexels.com/photos/1181376/pexels-photo-1181376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             title="Wipro"
             />
-            <UserCard
+            <CompanyCard
             url="https://images.pexels.com/photos/1181341/pexels-photo-1181341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             title="Verizon"
             />
-            <UserCard
+            <CompanyCard
             url="https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             title="IBM"
             />
-            <UserCard
+            <CompanyCard
             url="https://images.pexels.com/photos/3201587/pexels-photo-3201587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             title="Turing"
             />
-            <UserCard
+            <CompanyCard
             url="https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             title="PexelInc"
             />
-            <UserCard
+            <CompanyCard
             url="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
             title="SpaceX"
             />
-            <UserCard
+            <CompanyCard
             url="https://images.unsplash.com/photo-1612097099760-3bb8af85cd74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=849&q=80"
             title="Apple"
             />

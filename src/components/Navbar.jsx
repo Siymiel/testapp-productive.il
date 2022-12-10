@@ -4,12 +4,10 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { RxMagnifyingGlass } from 'react-icons/rx'
 import Logo from './Logo'
 import { Link } from 'react-router-dom'
-import { BiBell } from 'react-icons/bi';
 import { RxCross2, RxHamburgerMenu } from 'react-icons/rx';
 import { useDispatch, useSelector } from 'react-redux';
 import { attemptLogout } from '../redux/apiCalls'
-// import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -18,6 +16,8 @@ function classNames(...classes) {
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
+  const path = location.pathname;
   const authUser = useSelector(state => state.user.currentUser)
 
   const handleLogout = (e) => {
@@ -43,13 +43,13 @@ const Navbar = () => {
                 <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
                   <Link
                     to="/"
-                    className="inline-flex items-center border-b-2 border-[#1fb6ff] px-1 pt-1 text-lg font-light text-gray-900"
+                    className={`inline-flex items-center transition-all ${path === '/' ? 'border-b-2 border-[#1fb6ff]' : '' } px-1 text-lg font-light text-gray-900 hover:text-blue-500`}
                   >
                     Home
                   </Link>
                   <Link
                     to="/profile"
-                    className="inline-flex items-center px-1 pt-1 text-lg font-light text-gray-900"
+                    className={`inline-flex items-center px-1 text-lg font-light text-gray-900 hover:text-blue-500 transition-all  ${path === '/profile' ? 'border-b-2 border-[#1fb6ff]' : '' }`}
                   >
                     Profile
                   </Link>
@@ -87,14 +87,6 @@ const Navbar = () => {
                 </Disclosure.Button>
               </div>
               <div className="hidden lg:ml-4 lg:flex lg:items-center">
-                <button
-                  type="button"
-                  className="flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1fb6ff] focus:ring-offset-2"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <BiBell className="h-6 w-6" aria-hidden="true" />
-                </button>
-
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-4 flex-shrink-0">
                   <div>
@@ -120,20 +112,10 @@ const Navbar = () => {
                       <Menu.Item>
                         {({ active }) => (
                           <Link
-                            href="#"
+                            to="/profile"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-gray-700 font-light')}
                           >
                             Your Profile
-                          </Link>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <Link
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-gray-700 font-light')}
-                          >
-                            Settings
                           </Link>
                         )}
                       </Menu.Item>
@@ -160,28 +142,28 @@ const Navbar = () => {
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-[#1fb6ff] bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-[#1fb6ff]"
+                className="block border-l-4 border-[#1fb6ff] bg-indigo-50 py-2 pl-3 pr-4 text-base font-light text-[#1fb6ff]"
               >
                 Dashboard
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-light text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
               >
                 Team
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-light text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
               >
                 Projects
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-light text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
               >
                 Calendar
               </Disclosure.Button>
@@ -196,40 +178,29 @@ const Navbar = () => {
                   />
                 </div>
                 <div className="ml-3">
-                  <div className="text-base font-medium text-gray-800">Tom Cook</div>
-                  <div className="text-sm font-medium text-gray-500">tom@example.com</div>
+                  <div className="text-base font-light text-gray-800">Samuel</div>
+                  <div className="text-sm font-light text-gray-500">skiuthia77@example.com</div>
                 </div>
                 <button
                   type="button"
                   className="ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1fb6ff] focus:ring-offset-2"
                 >
                   <span className="sr-only">View notifications</span>
-                  {/* <BellIcon className="h-6 w-6" aria-hidden="true" /> */}
                 </button>
               </div>
               <div className="mt-3 space-y-1">
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
+                <Link
+                  to="/profile"
+                  className="block px-4 py-2 text-base font-light text-gray-500 hover:bg-gray-100 hover:text-gray-800"
                 >
                   Your Profile
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
-                >
-                  Settings
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800"
+                </Link>
+                <div
+                  className="block px-4 py-2 text-base font-light text-gray-500 hover:bg-gray-100 hover:text-gray-800"
                   onClick={handleLogout}
                 >
                   Sign out
-                </Disclosure.Button>
+                </div>
               </div>
             </div>
           </Disclosure.Panel>

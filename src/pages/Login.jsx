@@ -24,7 +24,7 @@ const Login = () => {
 
   return (
     <div
-      className="max-w-full mx-auto grid grid-cols-2 items-center bg-cover bg-center"
+      className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center bg-cover bg-center"
       style={{ height: '100vh' }}>
       <section>
         <div className="max-w-md mx-auto flex items-center space-x-3">
@@ -82,11 +82,16 @@ const Login = () => {
               Submit
             </button>
           </div>
+          <div className='pt-3 font-light text-sm'>
+            <h2 className='underline pb-1 text-base'>Mock Credentials</h2>
+            <p>Email: Sincere@april.biz</p>
+            <p>Password: 12345678</p>
+          </div>
         </form>
 
       </section>
       <section
-        className="h-full bg-cover bg-center"
+        className="h-full bg-cover bg-center hidden md:block"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/file-1636585210491-f28ca34ea8ecimage?dpr=2&auto=format&fit=crop&w=416&q=60')"
