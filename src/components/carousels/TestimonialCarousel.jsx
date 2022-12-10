@@ -1,9 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React, { Component } from "react";
 import Slider from "react-slick";
-import Cta001 from "../cards/Cta001";
-import Cta002 from "../cards/Cta002";
-import Cta003 from "../cards/Cta003";
+import Testimony from "../cards/Testimony";
 
 export default class TestimonialCarousel extends Component {
   render() {
@@ -18,41 +16,16 @@ export default class TestimonialCarousel extends Component {
       autoplay: true,
       autoplaySpeed: 3500,
       pauseOnHover: true,
-      cssEase: "linear",
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            initialSlide: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
+      cssEase: "linear"
     };
 
     return (
       <div className="pt-10 px-10">
         <Slider {...settings}>
-            <Cta001 />
-            <Cta002 />
-            <Cta003 />
+            <Testimony imageUrl="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" name="Samanta Hopkins"/>
+            <Testimony imageUrl="https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" name="Trevor Wonder"/>
+            <Testimony imageUrl="https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" name="Johnston Harvey"/>
+            <Testimony imageUrl="https://images.pexels.com/photos/773371/pexels-photo-773371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" name="Anastacia Smith"/>
         </Slider>
       </div>
     );

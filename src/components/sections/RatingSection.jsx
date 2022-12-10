@@ -24,7 +24,7 @@ const RatingSection = ({ handleOpenClick1 }) => {
         <Link to="https://jsonplaceholder.typicode.com/users" className='text-red-400'> https://jsonplaceholder.typicode.com/users </Link>
         ) (Except for the image)</p>
       <p className='text-sm font-light pt-2 text-center'>Click the search icon to dynamically change the username</p>
-      <div className='grid grid-cols-4 gap-6 max-w-full mx-auto px-10 pt-10'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-4 lg:gap-6 max-w-full mx-auto px-10 pt-10'>
       {
         users && users.map(user => <UserCard001 key={user.id} username={user?.username} handleOpenClick1={handleOpenClick1} id={user?.id} />)
       }

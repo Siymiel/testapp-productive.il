@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 import styled from 'styled-components';
 import { RiSearchLine } from 'react-icons/ri';
-import { MdFavoriteBorder } from 'react-icons/md';
 
 const Info = styled.div`
   opacity: 0;
@@ -85,9 +84,6 @@ const UserCard001 = ({username, id, handleOpenClick1}) => {
           <Div>
             <RiSearchLine />
           </Div>
-        </Icon>
-        <Icon>
-          <MdFavoriteBorder />
         </Icon>
       </Info>
     </Container>

@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { NextArrow, PrevArrow } from "../arrows/Arrows";
 import Cta001 from "../cards/Cta001";
 import Cta002 from "../cards/Cta002";
 import Cta003 from "../cards/Cta003";
@@ -19,13 +18,11 @@ export default class CtaCarousel extends Component {
       autoplaySpeed: 3500,
       pauseOnHover: true,
       cssEase: "linear",
-      nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />,
       responsive: [
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 2,
             infinite: true,
             dots: true
@@ -34,7 +31,7 @@ export default class CtaCarousel extends Component {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 2,
             initialSlide: 2
           }

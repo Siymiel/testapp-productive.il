@@ -4,8 +4,8 @@ import CtaCarousel from '../carousels/CtaCarousel';
 
 const CtaSection = () => {
   return (
-    <section className="mt-20">
-      <div className="text-center text-4xl font-light uppercase">
+    <section className="mt-28">
+      <div className="text-center text-3xl md:text-4xl font-light uppercase">
         <h2>Announcements</h2>
       </div>
       <CtaCarousel />
