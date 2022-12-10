@@ -39,7 +39,7 @@ const Home = () => {
   }
 
   return (
-  <>
+  <main>
     <Navbar />
     <HeroCarousel handleOpenClick={handleOpenClick}/>
     <Modal modalOpen={modalOpen} handleCloseClick={handleCloseClick}/>
@@ -52,7 +52,7 @@ const Home = () => {
     <PartnerCarousel />
     <ScrolltoTop />
     <Footer />
-  </>
+  </main>
   );
 }
 

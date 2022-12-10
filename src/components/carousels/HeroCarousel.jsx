@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  @media(max-width: 480px) {
+  @media(max-width: 754px) {
     height: 50vh;
   };
   ${mobile({ display: 'none' })}
