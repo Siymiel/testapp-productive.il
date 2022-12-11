@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React, { Component } from "react";
 import Slider from "react-slick";
-// import { NextArrow, PrevArrow } from "../arrows/Arrows";
+import { NextArrow, PrevArrow } from "../arrows/Arrows";
 import CompanyCard from "../cards/CompanyCard";
 import Ihub from '../../images/ihub.jpeg'
 import Google from '../../images/google.webp'
@@ -22,7 +22,7 @@ export default class CompanyCarousel extends Component {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 2000,
+      speed: 1800,
       slidesToShow: 4,
       slidesToScroll: 1,
       swipeToSlide: true,
@@ -30,15 +30,16 @@ export default class CompanyCarousel extends Component {
       autoplaySpeed: 6000,
       pauseOnHover: true,
       cssEase: "linear",
-      arrows: true,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
       responsive: [
         {
           breakpoint: 1024,
           settings: {
+            dots: true,
             slidesToShow: 2,
             slidesToScroll: 1,
             infinite: true,
-            dots: true
           }
         },
         {
@@ -46,6 +47,7 @@ export default class CompanyCarousel extends Component {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            dots: true
           }
         },
         {
